@@ -1,0 +1,52 @@
+Caesar Cipher Project
+A simple Python implementation of the Caesar Cipher for encrypting and decrypting messages as part of my #100DaysOfCode challenge.
+
+Features
+Encrypt and decrypt text using a shift-based Caesar cipher.
+
+Handles both alphabetic and non-alphabetic characters (leaves symbols, numbers, and spaces unchanged).
+
+Single unified function for both encryption and decryption.
+
+Prevents index out-of-range errors using the modulo (%) operator.
+
+Continuously prompts the user to encode/decode messages until they choose to exit.
+
+How It Works
+User Input:
+
+Choose whether to encode or decode.
+
+Enter the message.
+
+Specify the shift number.
+
+Cipher Process:
+
+The core logic uses a single function to handle both encryption and decryption.
+
+Only alphabetic characters are shifted; other characters remain the same.
+
+Index wrapping is ensured with the modulo operator, so shifting doesn’t exceed the alphabet's bounds.
+
+Looping:
+
+After each operation, users can choose to continue or exit, keeping the program interactive.
+
+Development Notes
+The project started with two separate functions for encrypting and decrypting only alphabetic messages.
+
+Refactored into one versatile function for better code efficiency.
+
+Improved handling of edge cases with modulo operations.
+
+Enhanced the user experience by allowing repeated runs until the user opts out.
+
+Usage
+Run P8_Caesar_Cipher.py.
+
+Follow on-screen prompts to encode or decode messages.
+
+Continue for as many messages as you like.
+
+Part of my ongoing 100 Days of Code journey. Feedback and suggestions welcome!
