@@ -1,0 +1,42 @@
+# Silent Auction – Python Project
+
+A simple command-line Silent Auction program built in Python. Users enter their bids in secret, and the highest bidder wins! Developed as part of my #100DaysOfCode challenge.
+
+---
+
+## Features
+
+- Accepts multiple bids using user prompts.
+- Bidders and their corresponding bids are stored securely in a Python dictionary.
+- Utilizes while loops for continuous bidding sessions until bidding ends.
+- Automatically determines and announces the highest bidder.
+- Clean and easy-to-read code with comments for learning purposes.
+
+---
+
+## How It Works
+
+1. The program asks each user for their name and bid amount.
+2. Each bid is added to a dictionary ({name: bid}).
+3. Users are prompted if there are more bidders—if not, bidding ends.
+4. At the end, the program scans all bids to find and display the winner and their bid.
+
+---
+
+## Getting Started
+
+1. Run the script in your terminal:
+
+   python main.py
+
+2. Follow the prompts to input names and bid amounts.
+3. When no bidders remain, the winner and highest bid will be displayed.
+
+---
+
+## What I Practiced & Learned
+
+- Using dictionaries to store and retrieve user data.
+- Constructing input loops with while and for.
+- Implementing conditional logic to control program flow.
+
