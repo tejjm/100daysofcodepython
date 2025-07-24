@@ -1,0 +1,55 @@
+# Calculator App – Python Project
+
+A simple command-line calculator built in Python, developed as part of my #100DaysOfCode challenge.
+
+---
+
+## Features
+
+- Supports basic operations: add, subtract, multiply, divide
+- Uses **functions** for clean and reusable code (inputs and outputs handled)
+- Implements a **dictionary** to map operators to functions
+- Includes **while loops** for repeated calculations
+- Uses **conditionals** for user choices and error handling
+
+---
+
+## How It Works
+
+1. Program prompts user for two numbers and an operator (+, -, *, /).
+2. Uses a dictionary to call the correct operation function.
+3. Displays the result and asks if the user wants to continue.
+4. Allows chaining calculations with previous results or exits as per user choice.
+
+---
+
+## Getting Started
+
+1. Save the project as `main.py`
+2. Run in your terminal:
+
+   python main.py
+
+3. Follow the prompts to perform calculations.
+
+---
+
+## What I Practiced
+
+- Functions with arguments and return values
+- Dictionaries mapping operators to functions
+- Input validation and control flow with while/if
+
+---
+
+## File Structure
+
+CalculatorApp/
+├── main.py
+└── README.md
+
+---
+
+## Part of #100DaysOfCode
+
+Day 10 complete!
