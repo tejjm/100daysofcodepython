@@ -1,0 +1,61 @@
+# Higher Lower – Python Project
+
+An interactive command-line game built in Python, inspired by the classic “Higher Lower” format. Players guess which option has more followers, and each correct guess increases their score. Built as part of my #100DaysOfCode challenge.
+
+---
+
+## Features
+
+- Displays engaging ASCII art visuals at the start
+- Randomly selects two entities from a dataset for each round
+- Shows names, descriptions, and countries for comparison
+- Takes user input to pick option A or B
+- Awards a point for every correct guess; game continues until a wrong answer
+- Displays final score and reveals follower counts when the game ends
+
+---
+
+## How It Works
+
+1. Program displays a game logo and greets the player.
+2. Two options (A & B) are shown, each with a name, description, and country.
+3. Player selects which option they think has a higher follower count by entering A or B.
+4. If correct, the score increases by 1 and the game continues—option B takes the place of A, and a new B is chosen.
+5. If incorrect, the game ends and the score is displayed, with follower counts revealed for both options.
+
+---
+
+## Getting Started
+
+1. Save your script as `main.py` (ensure `art.py` and `game_data.py` are present in the same folder).
+2. Run the script in your terminal:
+
+   python main.py
+
+3. Follow the on-screen prompts to play and test your knowledge!
+
+---
+
+## What I Practiced & Learned
+
+- Using Python dictionaries to store and compare data
+- Handling user input and validating responses
+- Implementing game loops and response logic
+- Enhancing user experience with ASCII art and clear prompts
+- Modularizing code for maintainability
+
+---
+
+## File Structure
+
+HigherLowerGame/
+├── art.py         (logo and vs graphics)
+├── game_data.py   (list of entities with descriptions and follower counts)
+├── main.py
+└── README.md
+
+---
+
+## Part of #100DaysOfCode
+
+Day 14 complete!
