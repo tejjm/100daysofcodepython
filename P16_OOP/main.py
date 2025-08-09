@@ -12,15 +12,17 @@ while user_input != False:
     if user_input == "report":
         cf.report()
         money.report()
+        time.sleep(2)
+        print("\n" * 60)
     elif user_input == "off":
-        user_input = True
+        user_input = False
     else:
         order = menu.find_drink(user_input)
         if cf.is_resource_sufficient(order):
             if money.make_payment(order.cost):
                 cf.make_coffee(order)
                 time.sleep(2)
-                print("\n" * 100)
+                print("\n" * 60)
 
 
 
