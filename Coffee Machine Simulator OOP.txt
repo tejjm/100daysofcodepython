@@ -1,0 +1,56 @@
+
+OOP Coffee Machine Simulator – Python Project
+
+A command-line coffee machine simulator rebuilt in Python using Object-Oriented Programming (OOP) principles. It handles menu options, resource checks, payments, and coffee preparation. This is an enhanced version of my Day 15 project, now leveraging classes and objects. Developed as part of my #100DaysOfCode challenge.
+
+Features
+OOP-based structure with classes for Menu, CoffeeMaker, and MoneyMachine
+
+Displays available drinks and processes user orders
+
+Checks for sufficient resources (water, milk, coffee) before brewing
+
+Handles payments, calculates change, and tracks earnings
+
+Generates reports for resources and money
+
+Turns off the machine with an "off" command
+
+How It Works
+Prompts the user for a drink choice from the menu (e.g., espresso, latte, cappuccino).
+
+If "report" is entered, displays current resources and earnings.
+
+For a drink order, verifies resource availability and processes payment.
+
+If payment succeeds, brews the coffee and updates resources/earnings.
+
+Continues running until "off" is entered.
+
+Getting Started
+Ensure supporting files (menu.py, coffee_maker.py, money_machine.py) are in the same folder.
+
+Save the script as main.py.
+
+Run in your terminal:
+
+text
+python main.py
+Follow the prompts to order drinks, view reports, or type "off" to exit.
+
+What I Practiced & Learned
+OOP concepts: Classes, objects, attributes, and methods
+
+Modular design by separating concerns into dedicated classes
+
+Integrating multiple classes for a cohesive program
+
+Refactoring procedural code into an object-oriented structure
+
+File Structure
+OOPCoffeeMachine/
+├── menu.py (Menu and MenuItem classes)
+├── coffee_maker.py (CoffeeMaker class)
+├── money_machine.py (MoneyMachine class)
+├── main.py
+└── README.md
