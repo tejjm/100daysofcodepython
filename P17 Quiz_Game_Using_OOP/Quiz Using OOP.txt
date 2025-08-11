@@ -1,0 +1,52 @@
+Quiz Game – Python Project
+A command-line trivia quiz game built in Python using Object-Oriented Programming (OOP). It presents true/false questions from a dataset, tracks the player's score, and provides feedback on answers. Developed as part of my #100DaysOfCode challenge.
+
+Features
+Loads trivia questions from a data file
+
+Uses OOP with classes for Questions and QuizBrain
+
+Asks true/false questions one by one
+
+Checks answers and updates score in real-time
+
+Displays final score at the end of the quiz
+
+Handles a fixed set of general knowledge questions
+
+How It Works
+Questions are loaded from data.py into a question bank using the Question class.
+
+The QuizBrain class manages the quiz flow, presenting each question in sequence.
+
+Player inputs "True" or "False" for each question.
+
+The program checks the answer, provides feedback, and increments the score if correct.
+
+Continues until all questions are answered, then displays the total score.
+
+Getting Started
+Ensure all files (question_model.py, data.py, quiz_brain.py, main.py) are in the same folder.
+
+Run the script in your terminal:
+
+text
+python main.py
+Answer the true/false questions as prompted!
+
+What I Practiced & Learned
+Creating classes, objects, attributes, and methods in OOP
+
+Organizing code into modular files for better structure
+
+Working with lists and dictionaries to manage trivia data
+
+Implementing loops and conditionals for quiz logic
+
+File Structure
+QuizGame/
+├── question_model.py (Question class)
+├── data.py (Question data)
+├── quiz_brain.py (QuizBrain class)
+├── main.py
+└── README.md
