@@ -1,0 +1,50 @@
+Turtle Race – Python Project
+
+A fun command-line Turtle graphics simulation of a race between colored turtles. Users bet on which turtle will win, and the program randomly advances them until a winner is determined. Built as part of my #100DaysOfCode challenge.
+
+Features
+Creates multiple Turtle objects, each with a unique color
+
+Allows user to bet on a winning color
+
+Simulates race with random forward movements
+
+Detects when a turtle crosses the finish line
+
+Compares winner to user's bet and displays result
+
+How It Works
+Sets up a screen and positions 6 turtles of different colors at the starting line.
+
+Prompts the user to bet on a color (e.g., "red", "blue").
+
+Starts the race: Each turtle moves a random distance (1-10 units) in a loop.
+
+The first turtle to reach x-coordinate > 220 wins.
+
+Announces the winner and whether the user's bet was correct.
+
+Getting Started
+Ensure Python’s Turtle module is installed (usually default in Python).
+
+Save the code as main.py.
+
+Run the script in a Python environment that supports GUI:
+
+text
+python main.py
+Enter your bet when prompted, watch the race, and click to exit when done.
+
+What I Practiced & Learned
+Creating and managing multiple object instances in OOP
+
+Working with object states (e.g., positions, colors)
+
+Using higher-order functions and loops for dynamic behavior
+
+Integrating randomization for unpredictable outcomes
+
+File Structure
+TurtleRace/
+├── main.py
+└── README.md
