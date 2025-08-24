@@ -1,0 +1,51 @@
+Snake Game (Part 1) – Python Project
+The first half of a classic Snake Game built in Python using the Turtle module. This version focuses on creating the snake body, refactoring to OOP, and implementing basic movement controls. Developed as part of my #100DaysOfCode challenge.
+
+Features
+Creates a multi-segment snake body using Turtle objects
+
+Refactored into an OOP structure with a Snake class
+
+Supports keyboard controls for up, down, left, and right directions
+
+Smooth snake movement with screen updates and delays
+
+Prevents invalid direction changes (e.g., no 180-degree turns)
+
+How It Works
+The screen is set up with a black background and title.
+
+A Snake object is instantiated and its body is created from predefined coordinates.
+
+Key bindings are set for arrow keys to control direction.
+
+In a game loop, the snake moves forward: tail segments follow the head's previous positions.
+
+Direction methods adjust the head's heading while avoiding reverse turns.
+
+Getting Started
+Ensure Python’s Turtle module is installed (usually default in Python).
+
+Save main.py and snake.py in the same folder.
+
+Run the script in a Python environment that supports GUI:
+
+text
+python main.py
+Use arrow keys to control the snake; click to exit when done.
+
+What I Practiced & Learned
+Refactoring procedural code into OOP with classes and methods
+
+Managing lists of Turtle objects for the snake body
+
+Implementing movement logic and direction controls
+
+Using screen listeners for keyboard input and game loops
+
+File Structure
+SnakeGamePart1/
+├── main.py
+├── snake.py
+└── README.md
+
