@@ -1,0 +1,59 @@
+Snake Game – Python Project
+
+A complete classic Snake Game built in Python using the Turtle module. Control the snake to eat food, grow longer, and avoid collisions with walls or itself while tracking your score. Developed as part of my #100DaysOfCode challenge.
+
+Features
+OOP structure with classes for Snake, Food, and Scoreboard
+
+Randomly generated food that the snake can eat to grow and score points
+
+Collision detection for walls and self-collisions
+
+Real-time score display and "Game Over" message
+
+Keyboard controls for directional movement (arrow keys)
+
+Smooth animation with screen updates and delays
+
+How It Works
+The screen is set up with a black background and boundaries.
+
+Snake, Food, and Scoreboard objects are created.
+
+Key bindings allow control of the snake's direction (up, down, left, right), preventing invalid turns.
+
+In the game loop, the snake moves, checks for food collisions (eats, grows, scores), wall collisions, or self-collisions.
+
+If a collision occurs, the game ends and displays "GAME OVER" with the final score.
+
+Food refreshes to a new random position after being eaten.
+
+Getting Started
+Ensure Python’s Turtle module is installed (usually default in Python).
+
+Save all files (main.py, snake.py, food.py, scoreboard.py) in the same folder.
+
+Run the script in a Python environment that supports GUI:
+
+text
+python main.py
+Use arrow keys to control the snake, eat red food circles, and avoid collisions. Click to exit when done.
+
+What I Practiced & Learned
+Implementing class inheritance (e.g., Food and Scoreboard inheriting from Turtle)
+
+Managing snake growth and movement with lists of Turtle objects
+
+Adding collision detection for boundaries and self-intersections
+
+Creating a game loop with updates, input handling, and scoring logic
+
+Modularizing code across multiple files for better organization
+
+File Structure
+SnakeGame/
+├── main.py
+├── snake.py
+├── food.py
+├── scoreboard.py
+└── README.md
