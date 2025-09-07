@@ -1,0 +1,66 @@
+Pong Game – Python Project
+
+A classic Pong Game built in Python using the Turtle module with Object-Oriented Programming principles. Control paddles to keep the ball in play and race to score points against your opponent. Developed as part of my #100DaysOfCode challenge.
+
+Features
+OOP design with classes for Paddle, Ball, and Scoreboard
+
+Two-player paddle controls with keyboard input (W/S for left paddle, Up/Down for right paddle)
+
+Ball movement, bouncing off walls and paddles with increasing speed on paddle hits
+
+Score tracking and display for both players
+
+Ball reset when a player scores a point
+
+How It Works
+Sets up an 800x600 window with a black background.
+
+Creates two paddle objects positioned on left and right sides.
+
+Creates a ball object that moves continuously, bouncing off top/bottom and paddles.
+
+Detects when the ball passes the left or right edge to award points and reset position.
+
+Updates and displays player scores during the game.
+
+Keyboard controls allow players to move their paddles vertically.
+
+Getting Started
+Ensure Python’s Turtle module is installed (usually default in Python).
+
+Save the files (main.py, paddle.py, ball.py, scoreboard.py) in the same folder.
+
+Run the script in a Python environment that supports GUI:
+
+text
+python main.py
+Control paddles using:
+
+Left paddle: 'W' (up) and 'S' (down)
+
+Right paddle: Up and Down arrow keys
+
+Play the Pong game until ready to exit (close the window).
+
+What I Practiced & Learned
+Created class hierarchies and used inheritance with Turtle class
+
+Implemented smooth paddle and ball movement with object state
+
+Detected collisions with walls and paddles
+
+Incorporated dynamic speed increases for ball after paddle hits
+
+Managed real-time score display with Turtle graphics
+
+Set up keyboard event listeners for two-player controls
+
+File Structure
+PongGame/
+├── main.py
+├── paddle.py
+├── ball.py
+├── scoreboard.py
+└── README.md
+
