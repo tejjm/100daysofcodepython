@@ -1,0 +1,62 @@
+Turtle Crossing Game – Python Project
+
+A fun and challenging arcade-style Turtle Crossing game built in Python using the Turtle graphics module and Object-Oriented Programming (OOP). The player controls a turtle that must cross a busy road while avoiding fast-moving cars. Each level increases the speed of the cars, adding difficulty over time. Developed as part of my #100DaysOfCode challenge.
+
+Features
+Player-controlled turtle using keyboard input (W key to move forward)
+
+Randomly generated cars moving horizontally across the screen with varying colors
+
+Progressive difficulty with car speed increasing each level
+
+Collision detection between player and cars, ending the game on impact
+
+Scoreboard tracking the current level and displaying "GAME OVER" upon failure
+
+How It Works
+Game window setup with 600x600 pixels and white background.
+
+Player turtle starts at the bottom of the screen and moves upwards on pressing the "W" key.
+
+Cars are randomly generated and move leftwards across the screen at increasing speeds.
+
+The player must avoid collision with cars while trying to reach the top of the screen.
+
+Upon successfully reaching the top (finish line), the level increases, the player's turtle resets, and car speed increases.
+
+Collision with a car ends the game with a "GAME OVER" message.
+
+Getting Started
+Ensure Python’s Turtle module is installed (usually included by default).
+
+Save all project files (main.py, player.py, car_manager.py, scoreboard.py) in the same directory.
+
+Run the game script with:
+
+text
+python main.py
+Use the "W" key to move the turtle forward to cross the road.
+
+Avoid the cars and progress levels to increase difficulty.
+
+Close the window or press exit after the game ends.
+
+What I Practiced & Learned
+Breaking down complex tasks into smaller, manageable classes
+
+Using OOP to organize game components like Player, CarManager, and Scoreboard
+
+Handling real-time game updates and collision detection
+
+Increasing game difficulty dynamically with level progression
+
+Managing keyboard input and the Turtle graphics event loop
+
+File Structure
+TurtleCrossingGame/
+├── main.py
+├── player.py
+├── car_manager.py
+├── scoreboard.py
+└── README.md
+
