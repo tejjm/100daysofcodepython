@@ -6,3 +6,7 @@ tags = list(soup.find_all("h3",class_="title"))
 titles = [tag.text for tag in list(soup.find_all("h3",class_="title"))]
 correct_ordered = titles[::-1]
 print(correct_ordered)
+# Writing this the above to a .txt file
+with open("Top 100 Movies","w") as file:
+    for movie in correct_ordered:
+        file.write(movie+"\n")
