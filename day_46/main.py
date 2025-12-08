@@ -9,19 +9,18 @@ except Exception as e:
     print(e)
 soup = BeautifulSoup(response.text,"html.parser")
 chart_name_data = soup.find_all("a", class_="chart-name")
-author_names = soup.find_all("a",class_="chart-artist")
+artist_names = soup.find_all("a",class_="chart-artist")
 clean_names = []
-authors = []
+artists = []
 for name in chart_name_data:
     title_span = name.find("span",class_=None)
-    author_span = name.find("span",class_=None)
-    if title_span and author_span:
+    if title_span:
         clean_names.append(title_span.get_text(strip=True))
-        authors.append(author_span.get_text(strip=True))
-print(clean_names)
-print(authors)
-# full_list = []
-# for n in len(clean_names):
-#     full_list.append(f"{clean_names(n)} by {authors(n)}")
-# print(full_list)
-# print(len(full_list))
+for name in artist_names:
+    artist_span = name.find("span")
+    if artist_span:
+        artists.append(artist_span.get_text(strip=True))
+songs = []
+for n in range (0,len(clean_names)-1):
+    songs.append(f"{clean_names[n]} by {artists[n]}")
+print(songs)
