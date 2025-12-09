@@ -24,5 +24,5 @@ def songs_scrapper():
     full_names = []
     for n in range (0,len(songs)-1):
         full_names.append(f"{songs[n]} by {artists[n]}")
-    return songs,full_names,time[:4]
+    return songs,full_names,time
 
