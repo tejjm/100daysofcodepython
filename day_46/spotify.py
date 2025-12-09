@@ -7,6 +7,8 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id = os.getenv("SPOTIFY_CL
                                             client_secret = os.getenv("SPOTIFY_CLIENT_SECRET"),
                                             redirect_uri = os.getenv("SPOTIFY_REDIRECT_URI"),
                                             scope="playlist-modify-private"))
-print("Current user:", sp.current_user()["display_name"])
+user_id = sp.current_user()["id"]
+print(f"Your specific user id is :{user_id}")
+print(f"Your user name now is {sp.current_user()["display_name"]}")
 
 
