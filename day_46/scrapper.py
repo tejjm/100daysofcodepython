@@ -11,17 +11,18 @@ def songs_scrapper():
     soup = BeautifulSoup(response.text,"html.parser")
     chart_name_data = soup.find_all("a", class_="chart-name")
     artist_names = soup.find_all("a",class_="chart-artist")
-    clean_names = []
+    songs = []
     artists = []
     for name in chart_name_data:
         title_span = name.find("span",class_=None)
         if title_span:
-            clean_names.append(title_span.get_text(strip=True))
+            songs.append(title_span.get_text(strip=True))
     for name in artist_names:
         artist_span = name.find("span")
         if artist_span:
             artists.append(artist_span.get_text(strip=True))
-    songs = []
-    for n in range (0,len(clean_names)-1):
-        songs.append(f"{clean_names[n]} by {artists[n]}")
-    return songs
+    full_names = []
+    for n in range (0,len(songs)-1):
+        full_names.append(f"{songs[n]} by {artists[n]}")
+    return songs,full_names,time[:4]
+
