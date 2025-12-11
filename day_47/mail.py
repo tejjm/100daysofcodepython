@@ -1,0 +1,22 @@
+import smtplib
+from email.message import EmailMessage
+from dotenv import load_dotenv
+import os
+from pathlib import Path
+load_dotenv()
+def send_mail():
+    EMAIL = os.getenv("SENDER_EMAIL")
+    PASSWORD = os.getenv("SENDER_PASSWORD")
+    print("Loaded from:", Path("./.env").resolve())
+    print("Password length:", len(PASSWORD) if PASSWORD else "None")
+    print(PASSWORD)
+    msg = EmailMessage()
+    msg["From"] = EMAIL
+    msg["To"] = "johnbeenrecruiting@gmail.com"
+    msg["Subject"] = "TEST"
+    msg.set_content("TEST")
+    with smtplib.SMTP("smtp.gmail.com",587) as smtp:
+        smtp.starttls()
+        smtp.login(EMAIL,PASSWORD)
+        smtp.send_message(msg)
+
