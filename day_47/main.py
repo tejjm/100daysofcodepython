@@ -1,6 +1,6 @@
-from price_scrapper import scrape
+from scrapper import scrape
 from mail import send_mail
-price=scrape()
-message = f"Hey the price for your item is reduced to ${price}"
-if price < 100:
+price,product=scrape()
+message = f"Hey the price for {product} on your wishlist is reduced to INR{price}"
+if price < 7000:
     send_mail(message=message)
