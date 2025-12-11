@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 def scrape():
-    header = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+    header = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","ACCEPT-LANGUAGE":"en-US,en;q=0.9"}
     url = "https://appbrewery.github.io/instant_pot/"
     try:
         response = requests.get(url=url,headers=header)
