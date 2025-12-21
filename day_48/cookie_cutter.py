@@ -16,7 +16,7 @@ time.sleep(2)
 cookie = driver.find_element(By.ID,"bigCookie")
 time.sleep(1)
 
-main_duration = 20
+main_duration = 30
 main_start = time.time()
 while time.time()-main_start < main_duration:
     check = time.time()
@@ -34,7 +34,6 @@ while time.time()-main_start < main_duration:
     p6_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice6"]').text).replace(",",""))
     cookies_text = (driver.find_element(By.XPATH,'//*[@id="cookies"]').text).replace(",","")
     cookies = re.match(r'\d+',cookies_text).group() if re.match(r'\d+',cookies_text) else None
-    print(cookies)
     # #Buying with cookies
     if p6_price:
         while int(p6_price) < int(cookies):
@@ -78,6 +77,8 @@ while time.time()-main_start < main_duration:
             p0_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice0"]').text).replace(",",""))
             cookies_text = (driver.find_element(By.XPATH,'//*[@id="cookies"]').text).replace(",","")
             cookies = re.match(r'\d+',cookies_text).group() if re.match(r'\d+',cookies_text) else None
-        print("Clicked p0")
+high_score = driver.find_element(By.XPATH,'//*[@id="cookiesPerSecond"]').text
+print(f"High score {high_score}")
+
 driver.quit()
 
