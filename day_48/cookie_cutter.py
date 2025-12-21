@@ -16,7 +16,7 @@ time.sleep(2)
 cookie = driver.find_element(By.ID,"bigCookie")
 time.sleep(1)
 
-main_duration = 30
+main_duration = 180
 main_start = time.time()
 while time.time()-main_start < main_duration:
     check = time.time()
