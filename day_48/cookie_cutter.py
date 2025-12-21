@@ -24,6 +24,7 @@ while time.time()-main_start < main_duration:
     while time.time()-check < check_duration:
         #Clicks on cookie for 5 secs
         cookie.click()
+    products = [6,5,4,3,2,1,0]
     p0_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice0"]').text).replace(",",""))
     p1_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice1"]').text).replace(",",""))
     p2_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice2"]').text).replace(",",""))
@@ -38,24 +39,45 @@ while time.time()-main_start < main_duration:
     if p6_price:
         while int(p6_price) < int(cookies):
             driver.find_element(By.XPATH,'//*[@id="product6"]').click()
+            p6_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice6"]').text).replace(",",""))
+            cookies_text = (driver.find_element(By.XPATH,'//*[@id="cookies"]').text).replace(",","")
+            cookies = re.match(r'\d+',cookies_text).group() if re.match(r'\d+',cookies_text) else None
     if p5_price:
         while int(p5_price) < int(cookies):
             driver.find_element(By.XPATH,'//*[@id="product5"]').click()
+            p5_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice5"]').text).replace(",",""))
+            cookies_text = (driver.find_element(By.XPATH,'//*[@id="cookies"]').text).replace(",","")
+            cookies = re.match(r'\d+',cookies_text).group() if re.match(r'\d+',cookies_text) else None
     if p4_price:
         while int(p4_price) < int(cookies):
             driver.find_element(By.XPATH,'//*[@id="product4"]').click()
+            p4_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice4"]').text).replace(",",""))
+            cookies_text = (driver.find_element(By.XPATH,'//*[@id="cookies"]').text).replace(",","")
+            cookies = re.match(r'\d+',cookies_text).group() if re.match(r'\d+',cookies_text) else None
     if p3_price:
         while int(p3_price) < int(cookies):
             driver.find_element(By.XPATH,'//*[@id="product3"]').click()
+            p3_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice3"]').text).replace(",",""))
+            cookies_text = (driver.find_element(By.XPATH,'//*[@id="cookies"]').text).replace(",","")
+            cookies = re.match(r'\d+',cookies_text).group() if re.match(r'\d+',cookies_text) else None
     if p2_price:
         while int(p2_price) < int(cookies):
             driver.find_element(By.XPATH,'//*[@id="product2"]').click()
+            p2_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice2"]').text).replace(",",""))
+            cookies_text = (driver.find_element(By.XPATH,'//*[@id="cookies"]').text).replace(",","")
+            cookies = re.match(r'\d+',cookies_text).group() if re.match(r'\d+',cookies_text) else None
     if p1_price:
         while int(p1_price) < int(cookies):
             driver.find_element(By.XPATH,'//*[@id="product1"]').click()
+            p1_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice1"]').text).replace(",",""))
+            cookies_text = (driver.find_element(By.XPATH,'//*[@id="cookies"]').text).replace(",","")
+            cookies = re.match(r'\d+',cookies_text).group() if re.match(r'\d+',cookies_text) else None
     if p0_price:
         while int(p0_price) < int(cookies):
             driver.find_element(By.XPATH,'//*[@id="product0"]').click()
+            p0_price = ((driver.find_element(By.XPATH,'//*[@id="productPrice0"]').text).replace(",",""))
+            cookies_text = (driver.find_element(By.XPATH,'//*[@id="cookies"]').text).replace(",","")
+            cookies = re.match(r'\d+',cookies_text).group() if re.match(r'\d+',cookies_text) else None
         print("Clicked p0")
 driver.quit()
 
