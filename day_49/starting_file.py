@@ -25,3 +25,11 @@ enter_pw = WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.X
 enter_pw.send_keys(ACCOUNT_PASSWORD)
 login_after_credentials = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="submit-button"]')))
 login_after_credentials.click()
+#Grabbing the days from schedule page
+days = WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,'#schedule-page .Schedule_dayTitle__YBybs')))
+days_id = [day.get_attribute("id") for day in days]
+booking_day = input("Enter the day you want to book\n")
+for booking in days_id:
+    if booking_day[:3].lower() in booking:
+        id = booking
+print(id)
