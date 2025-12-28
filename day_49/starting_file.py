@@ -31,10 +31,24 @@ booking_info = WebDriverWait(driver,10).until(EC.presence_of_all_elements_locate
 booking_text = [booking.text for booking in booking_info]
 count = 0
 booking_day = "Tuesday"
+time = "6:00 PM"
 for booking in booking_text:
     count +=1
     if booking_day[:3] in booking:
-        index = count-1
+        index1 = count-1
         text_check = booking
-print(index)
-print(text_check)
+# print(index)
+# print(text_check)
+#Finding Activity details by time
+activities = WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,'#schedule-page .Schedule_dayGroup__y79__')))[index1]
+tuesday_activities = activities.find_elements(By.CSS_SELECTOR,'.ClassCard_cardContent__WGvPp')
+tuesday_activities_text = [activity.text for activity in tuesday_activities]
+count = 0
+for activity in tuesday_activities_text:
+    count+=1
+    if time in activity:
+        index2 = count-1
+        print(index2)
+activities = WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,'#schedule-page .Schedule_dayGroup__y79__')))[index1]
+booking_buttons = activities.find_elements(By.CSS_SELECTOR,'.ClassCard_cardActions__tVZBm')
+booking_buttons[index2].click()
