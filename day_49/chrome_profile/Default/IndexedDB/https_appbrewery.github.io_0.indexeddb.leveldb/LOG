@@ -1,3 +1,3 @@
-2025/12/25-14:04:56.896 1297b Reusing MANIFEST /home/uttejm/100daysofcodepython/day_49/chrome_profile/Default/IndexedDB/https_appbrewery.github.io_0.indexeddb.leveldb/MANIFEST-000001
-2025/12/25-14:04:56.896 1297b Recovering log #3
-2025/12/25-14:04:56.916 1297b Reusing old log /home/uttejm/100daysofcodepython/day_49/chrome_profile/Default/IndexedDB/https_appbrewery.github.io_0.indexeddb.leveldb/000003.log 
+2025/12/28-15:49:51.170 16cef Reusing MANIFEST /home/uttejm/100daysofcodepython/day_49/chrome_profile/Default/IndexedDB/https_appbrewery.github.io_0.indexeddb.leveldb/MANIFEST-000001
+2025/12/28-15:49:51.170 16cef Recovering log #3
+2025/12/28-15:49:51.186 16cef Reusing old log /home/uttejm/100daysofcodepython/day_49/chrome_profile/Default/IndexedDB/https_appbrewery.github.io_0.indexeddb.leveldb/000003.log 
