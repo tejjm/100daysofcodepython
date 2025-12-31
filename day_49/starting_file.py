@@ -51,8 +51,9 @@ for activity in tuesday_activities_text:
 activities = WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,'#schedule-page .Schedule_dayGroup__y79__')))[index1]
 booking_buttons = activities.find_elements(By.CSS_SELECTOR,'.ClassCard_cardActions__tVZBm')
 booking_status=(booking_buttons[index2].text)
-test = [b.text for b in booking_buttons]
-print(test)
+date_time = booking_buttons[index2].get_attribute('id')
+print(date_time)
+#Finding if the status is already booked 
 # if booking_status == "Booked":
 #     print("Already Booked")
 # if booking_status == "Join Waitlist":
