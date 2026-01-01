@@ -41,6 +41,9 @@ for booking in booking_text:
 # print(text_check)
 #Finding Activity details by time
 activities = WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,'#schedule-page .Schedule_dayGroup__y79__')))[index1]
+date_time = WebDriverWait(activities,10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.Schedule_dayTitle__YBybs')))
+text_dt = [dt.text for dt in date_time] #Date time for displaying o/p
+dt = text_dt[0]
 tuesday_activities = activities.find_elements(By.CSS_SELECTOR,'.ClassCard_cardContent__WGvPp')
 tuesday_activities_text = [activity.text for activity in tuesday_activities]
 count = 0
@@ -51,16 +54,17 @@ for activity in tuesday_activities_text:
 activities = WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR,'#schedule-page .Schedule_dayGroup__y79__')))[index1]
 booking_buttons = activities.find_elements(By.CSS_SELECTOR,'.ClassCard_cardActions__tVZBm')
 booking_status=(booking_buttons[index2].text)
-date_time = booking_buttons[index2].get_attribute('id')
-print(date_time)
+# date_time = booking_buttons[index2].get_attribute('id')
+# print(date_time)#Not printing
 #Finding if the status is already booked 
-# if booking_status == "Booked":
-#     print("Already Booked")
-# if booking_status == "Join Waitlist":
-#     print(f"Joining waitlist")
-#     booking_buttons[index2].click()
-# if booking_status == "Book Class":
-#     booking_buttons[index2].click()
-#     print(f"A class has been booked")
-# if booking_status == "Waitlisted":
-#     print(f"{booking_status}")
+if booking_status == "Booked":
+    print(f"Already Booked on {dt}")
+if booking_status == "Join Waitlist":
+    print(f"Joining waitlist on {dt}")
+    booking_buttons[index2].click()
+if booking_status == "Book Class":
+    booking_buttons[index2].click()
+    print(f"A class has been booked on {dt}")
+if booking_status == "Waitlisted":
+    print(f"Already on waitlist for {dt}")
+    
