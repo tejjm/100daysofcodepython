@@ -57,14 +57,23 @@ booking_status=(booking_buttons[index2].text)
 # date_time = booking_buttons[index2].get_attribute('id')
 # print(date_time)#Not printing
 #Finding if the status is already booked 
+booked_count = 0
+waitlist_count = 0
+already_booked_waitlisted = 0
 if booking_status == "Booked":
-    print(f"Already Booked on {dt}")
+    already_booked_waitlisted+=1
 if booking_status == "Join Waitlist":
-    print(f"Joining waitlist on {dt}")
+    waitlist_count+=1
     booking_buttons[index2].click()
 if booking_status == "Book Class":
     booking_buttons[index2].click()
-    print(f"A class has been booked on {dt}")
+    booked_count+=1
 if booking_status == "Waitlisted":
-    print(f"Already on waitlist for {dt}")
-    
+    already_booked_waitlisted+=1
+
+print("--- BOOKING SUMMARY ---")
+print(f"Classed booked :{booked_count}")
+print(f"Already booked/waitlisted :{already_booked_waitlisted}")
+print(f"Total Tuesday 6pm classes processed: {booked_count+waitlist_count+already_booked_waitlisted}\n")
+
+
