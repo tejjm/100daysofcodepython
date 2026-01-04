@@ -107,5 +107,28 @@ for index in day_indexes:
         if time in activity:
             index2 = count-1
             info_index.append(index2)
-print(activities)
-print(info_index)
+booked_count = 0
+waitlist_count = 0
+already_booked_waitlisted = 0
+for activity in activities:
+    booking_buttons = activity.find_elements(By.CSS_SELECTOR,'.ClassCard_cardActions__tVZBm')
+    booking_status=(booking_buttons[4].text)
+    date_time = booking_buttons[4].get_attribute('id')
+#Finding if the status is already booked 
+
+    if booking_status == "Booked":
+        already_booked_waitlisted+=1
+    if booking_status == "Join Waitlist":
+        waitlist_count+=1
+        booking_buttons[index2].click()
+    if booking_status == "Book Class":
+        booking_buttons[index2].click()
+        booked_count+=1
+    if booking_status == "Waitlisted":
+        already_booked_waitlisted+=1
+
+
+print("--- BOOKING SUMMARY ---")
+print(f"Classes booked : {booked_count}")
+print(f"Already booked/waitlisted : {already_booked_waitlisted}")
+print(f"Total Tuesday 6pm classes processed: {booked_count+waitlist_count+already_booked_waitlisted}\n")
