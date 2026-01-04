@@ -1,3 +1,7 @@
-2026/01/04-14:04:21.266 5 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_49/chrome_profile/Default/Session Storage/MANIFEST-000001
-2026/01/04-14:04:21.267 5 Recovering log #4
-2026/01/04-14:04:21.268 5 Reusing old log /home/uttejm/100daysofcodepython/day_49/chrome_profile/Default/Session Storage/000004.log 
+2026/01/04-16:42:28.398 5 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_49/chrome_profile/Default/Session Storage/MANIFEST-000001
+2026/01/04-16:42:28.399 5 Recovering log #4
+2026/01/04-16:42:28.400 5 Level-0 table #7: started
+2026/01/04-16:42:28.404 5 Level-0 table #7: 14542 bytes OK
+2026/01/04-16:42:28.405 5 Recovering log #7
+2026/01/04-16:42:28.405 5 Reusing old log /home/uttejm/100daysofcodepython/day_49/chrome_profile/Default/Session Storage/000007.log 
+2026/01/04-16:42:28.409 5 Delete type=0 #4
