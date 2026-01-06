@@ -54,4 +54,4 @@ if number_of_bookings==counts[0]+counts[1]+counts[2]:
     print(f"Verification matched")
     print(f"Booked/Waitlist joined ={counts[0]+counts[1]+counts[2]}")
     print(f"Verified count = {number_of_bookings}")
-
+driver.quit()
