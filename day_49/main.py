@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 from login import login
 from retry_func import retry
 import os
@@ -17,9 +18,9 @@ chrome_options.add_argument("--start-maximized")
 chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
 chrome_options.add_experimental_option("detach",True)
 driver = webdriver.Chrome(options=chrome_options)
-driver.get(URL)
+
 #Automating login
-success = retry(lambda:login(driver,ACCOUNT_EMAIL,ACCOUNT_PASSWORD),delay=2,description="Login to Gym")
+success = retry(lambda:login(driver,ACCOUNT_EMAIL,ACCOUNT_PASSWORD,URL),delay=2,description="Login to Gym")
 if not success:
     print("Failed to login")
     driver.quit()
