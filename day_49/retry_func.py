@@ -1,5 +1,5 @@
 import time
-def retry(func,retries = 3,delay=2,description=None):
+def retry(func,retries = 7,delay=2,description=None):
     for i in range(1,retries+1):
         print(f"Trying attempt = {i}")
         desc = description or "Action"
