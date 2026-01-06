@@ -4,9 +4,9 @@ def retry(func,retries = 7,delay=2,description=None):
         print(f"Trying attempt = {i}")
         desc = description or "Action"
         try:
-            func()
+            result = func()
             print(f"{desc} succeeded on attempt {i}!")
-            return True
+            return result
             
         except Exception as e:
                 print(f"{desc} failed on attempt {i}/{retries}: {e}")

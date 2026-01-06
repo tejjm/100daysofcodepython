@@ -27,8 +27,6 @@ if not success:
     driver.quit()
 
 # #Grabbing the days from schedule page
-booked_count,waitlist_count,already_booked_waitlisted = None,None,None
-counts = [booked_count,waitlist_count,already_booked_waitlisted]
 counts = retry(lambda:book_class(driver),delay=2,description="booking classes")
 
 
@@ -40,9 +38,9 @@ bookings = WebDriverWait(driver, 15).until(
 number_of_bookings = len(bookings)
 
 print("--- BOOKING SUMMARY ---\n")
-print(f"Classes booked : {booked_count}")
-print(f"Already booked/waitlisted : {already_booked_waitlisted}")
-print(f"Total classes processed: {booked_count+waitlist_count+already_booked_waitlisted}\n")
+print(f"Classes booked : {counts[0]+counts[1]}")
+print(f"Already booked/waitlisted : {counts[2]}")
+print(f"Total classes processed: {counts[0]+counts[1]+counts[2]}\n")
 print("--- VERIFYING ON MY BOOKINGS PAGE ---\n")
 print(f"Verified bookings : {number_of_bookings}\n")
 verified_bookings_text = [vb.text for vb in bookings]
@@ -52,8 +50,8 @@ if verified_bookings_text:
         sno+=1
         print(f"{sno}. {text}")
         print('\n')
-if number_of_bookings==booked_count+waitlist_count:
+if number_of_bookings==counts[0]+counts[1]+counts[2]:
     print(f"Verification matched")
-    print(f"Booked/Waitlist joined ={booked_count+waitlist_count}")
+    print(f"Booked/Waitlist joined ={counts[0]+counts[1]+counts[2]}")
     print(f"Verified count = {number_of_bookings}")
 

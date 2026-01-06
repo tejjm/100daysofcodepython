@@ -49,7 +49,6 @@ def book_class(driver,):
         booking_buttons = activity.find_elements(By.CSS_SELECTOR,'.ClassCard_cardActions__tVZBm')
         print(f"Booking buttons availale {len(booking_buttons)}")
         booking_status=(booking_buttons[info_index[n]].text)
-        print(f"{booking_status} for {info_index[n]}")
         date_time = booking_buttons[info_index[n]].get_attribute('id')
     # #Finding if the status is already booked 
 
@@ -69,13 +68,9 @@ def book_class(driver,):
             except Exception as e:
                 raise Exception(f"Login failed {e}")
         if booking_status == "Book Class":
-            print(f"Info index {info_index[n]}")
-            print(f"Length of booking index {len(booking_buttons)}")
             booking_buttons[info_index[n]].click()
             try:
                 booked_count+=1
-                print(f"Info index {info_index[n]}")
-                print(f"Length of booking index {len(booking_buttons)}")
                 booking_buttons[info_index[n]].click()
                 time.sleep(2)
                 error_elem = driver.find_elements(By.CSS_SELECTOR,'.ClassCard_cardHeader__D9pf3 .ClassCard_errorMessage__Xwjwz')
@@ -88,4 +83,5 @@ def book_class(driver,):
             already_booked_waitlisted+=1
         n+=1
     print(f"Booking process done{booked_count,waitlist_count,already_booked_waitlisted}")
-    return booked_count,waitlist_count,already_booked_waitlisted
+    counts = [booked_count,waitlist_count,already_booked_waitlisted]
+    return counts
