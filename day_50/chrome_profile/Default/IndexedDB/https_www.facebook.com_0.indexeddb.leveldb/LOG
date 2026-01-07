@@ -1,0 +1,6 @@
+2026/01/07-15:01:12.541 5832 Creating DB /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb since it was missing.
+2026/01/07-15:01:12.551 5832 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/01/07-15:01:22.838 5839 Level-0 table #5: started
+2026/01/07-15:01:22.842 5839 Level-0 table #5: 24652 bytes OK
+2026/01/07-15:01:22.849 5839 Delete type=0 #3
+2026/01/07-15:01:22.849 5832 Manual compaction at level-0 from '\x00\x0b\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0c\x00\x00\x00' @ 0 : 0; will stop at (end)

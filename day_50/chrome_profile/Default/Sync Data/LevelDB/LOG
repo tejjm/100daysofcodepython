@@ -1,3 +1,3 @@
-2026/01/07-14:33:29.084 2b62 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/Sync Data/LevelDB/MANIFEST-000001
-2026/01/07-14:33:29.115 2b62 Recovering log #3
-2026/01/07-14:33:29.116 2b62 Reusing old log /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/Sync Data/LevelDB/000003.log 
+2026/01/07-15:04:06.852 6074 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/Sync Data/LevelDB/MANIFEST-000001
+2026/01/07-15:04:06.873 6074 Recovering log #3
+2026/01/07-15:04:06.873 6074 Reusing old log /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/Sync Data/LevelDB/000003.log 

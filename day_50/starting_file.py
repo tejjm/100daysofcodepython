@@ -15,5 +15,9 @@ driver = webdriver.Chrome(options=chrome_options)
 driver.get(url=URL)
 
 #Logging in
-accept = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c1649373191"]/div/div[2]/div/div/div[1]/div[1]/button/div[2]/div[2]/div')))
-accept.click()
+# accept = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c1649373191"]/div/div[2]/div/div/div[1]/div[1]/button/div[2]/div[2]/div')))
+# accept.click()
+login = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c1649373191"]/div/div[1]/div/main/div[1]/div/div/div/div/div[1]/header/div/div[2]/div[2]/a/div[2]/div[2]/div')))
+login.click()
+login_with_fb = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c-79007885"]/div/div/div/div[2]/div/div/div[2]/div[2]/span/div[2]/button/div[2]/div[2]/div[2]/div/div')))
+login_with_fb.click()
