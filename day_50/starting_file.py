@@ -30,3 +30,17 @@ driver.switch_to.window(fb_window)
 print(driver.title)
 continue_as_u = WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.XPATH,"//div[@role='button' and starts-with(@aria-label,'Continue as')]")))
 continue_as_u.click()
+driver.switch_to.window(base_window)
+print(print(driver.title))
+like_xpath = '//*[@id="main-content"]/div[1]/div/div/div/div[1]/div/div/div[4]/div/div[4]'
+like_button = WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.XPATH,like_xpath)))
+swipe = True
+while swipe:
+    try:
+        time.sleep(2)
+        like_button.click()
+    except Exception as e:
+        swipe = False
+        print("Swiping done")
+        print(f"Done with swiping due to {e}")
+        driver.quit()
