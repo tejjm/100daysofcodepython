@@ -23,14 +23,16 @@ login.click()
 login_with_fb = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c-79007885"]/div/div/div/div[2]/div/div/div[2]/div[2]/span/div[2]/button/div[2]/div[2]/div[2]/div/div')))
 login_with_fb.click()
 print(driver.title)
-base_window = driver.window_handles[0]
-time.sleep(2)
-fb_window = driver.window_handles[1]
-driver.switch_to.window(fb_window)
-print(driver.title)
-continue_as_u = WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.XPATH,"//div[@role='button' and starts-with(@aria-label,'Continue as')]")))
-continue_as_u.click()
-driver.switch_to.window(base_window)
+base = driver.current_window_handle
+time.sleep(3)
+handles = set(driver.window_handles)
+if len(handles) > 1:
+    fb_window = (handles-{base}).pop()
+    driver.switch_to.window(fb_window)
+    print(driver.title)
+    continue_as_u = WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.XPATH,"//div[@role='button' and starts-with(@aria-label,'Continue as')]")))
+    continue_as_u.click()
+driver.switch_to.window(base)
 print(print(driver.title))
 like_xpath = '//*[@id="main-content"]/div[1]/div/div/div/div[1]/div/div/div[4]/div/div[4]'
 like_button = WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.XPATH,like_xpath)))
