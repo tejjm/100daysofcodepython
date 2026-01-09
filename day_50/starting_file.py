@@ -4,6 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
+import time
 
 URL = 'https://tinder.com/'
 chrome_options = webdriver.ChromeOptions()
@@ -21,3 +22,11 @@ login = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*
 login.click()
 login_with_fb = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c-79007885"]/div/div/div/div[2]/div/div/div[2]/div[2]/span/div[2]/button/div[2]/div[2]/div[2]/div/div')))
 login_with_fb.click()
+print(driver.title)
+base_window = driver.window_handles[0]
+time.sleep(2)
+fb_window = driver.window_handles[1]
+driver.switch_to.window(fb_window)
+print(driver.title)
+continue_as_u = WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.XPATH,"//div[@role='button' and starts-with(@aria-label,'Continue as')]")))
+continue_as_u.click()
