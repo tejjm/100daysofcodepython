@@ -18,31 +18,45 @@ driver.get(url=URL)
 #Logging in
 # accept = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c1649373191"]/div/div[2]/div/div/div[1]/div[1]/button/div[2]/div[2]/div')))
 # accept.click()
-login = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c1649373191"]/div/div[1]/div/main/div[1]/div/div/div/div/div[1]/header/div/div[2]/div[2]/a/div[2]/div[2]/div')))
-login.click()
-login_with_fb = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c-79007885"]/div/div/div/div[2]/div/div/div[2]/div[2]/span/div[2]/button/div[2]/div[2]/div[2]/div/div')))
-login_with_fb.click()
-print(driver.title)
-base = driver.current_window_handle
-time.sleep(3)
-handles = set(driver.window_handles)
-if len(handles) > 1:
-    fb_window = (handles-{base}).pop()
-    driver.switch_to.window(fb_window)
+
+try:
+    login = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c1649373191"]/div/div[1]/div/main/div[1]/div/div/div/div/div[1]/header/div/div[2]/div[2]/a/div[2]/div[2]/div')))
+    login.click()
+    login_with_fb = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c-79007885"]/div/div/div/div[2]/div/div/div[2]/div[2]/span/div[2]/button/div[2]/div[2]/div[2]/div/div')))
+    login_with_fb.click()
     print(driver.title)
-    continue_as_u = WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.XPATH,"//div[@role='button' and starts-with(@aria-label,'Continue as')]")))
-    continue_as_u.click()
-driver.switch_to.window(base)
-print(print(driver.title))
+    base = driver.current_window_handle
+    time.sleep(3)
+    handles = set(driver.window_handles)
+    if len(handles) > 1:
+        fb_window = (handles-{base}).pop()
+        driver.switch_to.window(fb_window)
+        print(driver.title)
+        continue_as_u = WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.XPATH,"//div[@role='button' and starts-with(@aria-label,'Continue as')]")))
+        continue_as_u.click()
+    driver.switch_to.window(base)
+    print(print(driver.title))
+except Exception:
+    print("Passing")
+    pass
+
 like_xpath = '//*[@id="main-content"]/div[1]/div/div/div/div[1]/div/div/div[4]/div/div[4]'
-like_button = WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.XPATH,like_xpath)))
 swipe = True
+like_button = WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.XPATH,like_xpath)))
+count = 0
 while swipe:
     try:
-        time.sleep(2)
-        like_button.click()
-    except Exception as e:
-        swipe = False
-        print("Swiping done")
-        print(f"Done with swiping due to {e}")
-        driver.quit()
+        pop_up1 = WebDriverWait(driver,2).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c-79007885"]/div/div/div[1]')))
+        pop_up1.click()
+        break
+        
+    except Exception:
+        pass
+    like_button.click()
+    time.sleep(2)
+    print(f"Swiping done {count} times")
+
+profile = WebDriverWait(driver,2).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c1649373191"]/div/div[1]/div/aside/nav/a')))
+profile.click()
+like_button = WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c1649373191"]/div/div[1]/div/aside/nav[2]/div/div/div/div/div/div/div[20]')))
+# driver.quit()
