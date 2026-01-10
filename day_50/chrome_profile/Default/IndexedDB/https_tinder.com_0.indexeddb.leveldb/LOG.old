@@ -1,6 +1,3 @@
-2026/01/10-16:33:52.617 1f3ed Reusing MANIFEST /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/IndexedDB/https_tinder.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/01/10-16:33:52.618 1f3ed Recovering log #27
-2026/01/10-16:33:52.624 1f3ed Reusing old log /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/IndexedDB/https_tinder.com_0.indexeddb.leveldb/000027.log 
-2026/01/10-16:33:53.958 1f3ef Level-0 table #33: started
-2026/01/10-16:33:53.969 1f3ef Level-0 table #33: 3070821 bytes OK
-2026/01/10-16:33:53.974 1f3ef Delete type=0 #27
+2026/01/10-16:50:45.860 20658 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/IndexedDB/https_tinder.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/01/10-16:50:45.860 20658 Recovering log #32
+2026/01/10-16:50:45.864 20658 Reusing old log /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/IndexedDB/https_tinder.com_0.indexeddb.leveldb/000032.log 

@@ -58,5 +58,11 @@ while swipe:
 
 profile = WebDriverWait(driver,2).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c1649373191"]/div/div[1]/div/aside/nav/a')))
 profile.click()
-like_button = WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c1649373191"]/div/div[1]/div/aside/nav[2]/div/div/div/div/div/div/div[20]')))
+logout = WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c1649373191"]/div/div[1]/div/aside/nav[2]/div/div/div/div/div/div/div[20]')))
+driver.execute_script('arguments[0].scrollIntoView({block:"center"});',logout)
+WebDriverWait(driver,5).until(EC.element_to_be_clickable(logout))
+logout.click()
+confirm_logout = WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c-79007885"]/div/div/div[2]/button[1]/div[2]')))
+confirm_logout.click()
+print("Logout successful")
 # driver.quit()
