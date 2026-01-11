@@ -1,3 +1,7 @@
-2026/01/10-16:51:56.733 208d4 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/IndexedDB/https_tinder.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/01/10-16:51:56.733 208d4 Recovering log #32
-2026/01/10-16:51:56.738 208d4 Reusing old log /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/IndexedDB/https_tinder.com_0.indexeddb.leveldb/000032.log 
+2026/01/11-05:18:13.972 1697 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/IndexedDB/https_tinder.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/01/11-05:18:13.972 1697 Recovering log #37
+2026/01/11-05:18:13.973 1697 Reusing old log /home/uttejm/100daysofcodepython/day_50/chrome_profile/Default/IndexedDB/https_tinder.com_0.indexeddb.leveldb/000037.log 
+2026/01/11-05:18:14.311 1697 Compacting 1@1 + 1@2 files
+2026/01/11-05:18:14.317 1697 Generated table #40@1: 594 keys, 144887 bytes
+2026/01/11-05:18:14.317 1697 Compacted 1@1 + 1@2 files => 144887 bytes
+2026/01/11-05:18:14.322 1697 compacted to: files[ 0 0 1 0 0 0 0 ]

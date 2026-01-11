@@ -52,7 +52,13 @@ while swipe:
         
     except Exception:
         pass
+    try:
+        pop_up2 = WebDriverWait(driver,2).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c-79007885"]/div/div/div[2]/button[2]')))
+        pop_up2.click()
+    except Exception:
+        pass
     like_button.click()
+    count+=1
     time.sleep(2)
     print(f"Swiping done {count} times")
 
@@ -65,4 +71,4 @@ logout.click()
 confirm_logout = WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="c-79007885"]/div/div/div[2]/button[1]/div[2]')))
 confirm_logout.click()
 print("Logout successful")
-# driver.quit()
+driver.quit()
