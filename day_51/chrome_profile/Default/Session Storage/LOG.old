@@ -1,2 +1,3 @@
-2026/01/17-09:06:09.850 486a Creating DB /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Session Storage since it was missing.
-2026/01/17-09:06:09.860 486a Reusing MANIFEST /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Session Storage/MANIFEST-000001
+2026/01/17-10:00:41.520 7795 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Session Storage/MANIFEST-000001
+2026/01/17-10:00:41.521 7795 Recovering log #3
+2026/01/17-10:00:41.522 7795 Reusing old log /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Session Storage/000003.log 
