@@ -1,0 +1,26 @@
+2026/01/26-14:51:53.684 e2a5 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/IndexedDB/https_www.speedtest.net_0.indexeddb.leveldb/MANIFEST-000001
+2026/01/26-14:51:53.684 e2a5 Recovering log #52
+2026/01/26-14:51:53.684 e2a5 Reusing old log /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/IndexedDB/https_www.speedtest.net_0.indexeddb.leveldb/000052.log 
+2026/01/26-14:51:53.684 e2a5 Delete type=2 #51
+2026/01/26-14:51:53.707 e2aa Level-0 table #57: started
+2026/01/26-14:51:53.711 e2aa Level-0 table #57: 602 bytes OK
+2026/01/26-14:51:53.715 e2aa Delete type=0 #52
+2026/01/26-14:51:53.716 e2a2 Manual compaction at level-0 from '\x00\x15\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x16\x00\x00\x00' @ 0 : 0; will stop at '\x00\x15\x00\x00\x05' @ 3597 : 1
+2026/01/26-14:51:53.716 e2a2 Compacting 1@0 + 1@1 files
+2026/01/26-14:51:53.719 e2a2 Generated table #58@0: 323 keys, 5969 bytes
+2026/01/26-14:51:53.719 e2a2 Compacted 1@0 + 1@1 files => 5969 bytes
+2026/01/26-14:51:53.723 e2a2 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/01/26-14:51:53.723 e2a2 Delete type=2 #57
+2026/01/26-14:51:53.723 e2a2 Manual compaction at level-0 from '\x00\x15\x00\x00\x05' @ 3597 : 1 .. '\x00\x16\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/01/26-14:51:53.796 e2a9 Manual compaction at level-0 from '\x00\x16\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x17\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/01/26-14:51:53.959 e2a5 Level-0 table #60: started
+2026/01/26-14:51:53.962 e2a5 Level-0 table #60: 8621 bytes OK
+2026/01/26-14:51:53.967 e2a5 Delete type=0 #56
+2026/01/26-14:51:53.967 e2a5 Delete type=2 #54
+2026/01/26-14:51:53.967 e2a5 Manual compaction at level-0 from '\x00\x17\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x18\x00\x00\x00' @ 0 : 0; will stop at '\x00\x17\x00\x00\xc8\x18\x00u\x00s\x00e\x00r\x00_\x00U\x00n\x00i\x00v\x00S\x00p\x00e\x00e\x00d\x00T\x00e\x00s\x00t\x00R\x00e\x00s\x00u\x00l\x00t' @ 3768 : 1
+2026/01/26-14:51:53.967 e2a5 Compacting 1@0 + 1@1 files
+2026/01/26-14:51:53.971 e2a5 Generated table #61@0: 324 keys, 6028 bytes
+2026/01/26-14:51:53.971 e2a5 Compacted 1@0 + 1@1 files => 6028 bytes
+2026/01/26-14:51:53.975 e2a5 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/01/26-14:51:53.975 e2a5 Delete type=2 #60
+2026/01/26-14:51:53.976 e2a5 Manual compaction at level-0 from '\x00\x17\x00\x00\xc8\x18\x00u\x00s\x00e\x00r\x00_\x00U\x00n\x00i\x00v\x00S\x00p\x00e\x00e\x00d\x00T\x00e\x00s\x00t\x00R\x00e\x00s\x00u\x00l\x00t' @ 3768 : 1 .. '\x00\x18\x00\x00\x00' @ 0 : 0; will stop at (end)
