@@ -4,6 +4,8 @@ EMAIL = 'johnbeenrecruiting@gmail.com'
 PW = 'Testing@1990'
 URL = 'https://bsky.app/'
 SPEED_URL = "https://www.speedtest.net/"
+DOWNLOAD_CSS = 'span.result-data-large.number.result-data-value.download-speed'
+UPLOAD_CSS = 'span.result-data-large.number.result-data-value.upload-speed'
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -14,8 +16,6 @@ import undetected_chromedriver as uc
 import os
 import time
 import random
-DOWNLOAD_SPEED = '//*[@id="container"]/div[1]/div[3]/div/div/div/div[2]/div[2]/div/div[4]/div/div[3]/div/div/div[2]/div[1]/div[1]/div/div[2]/span'
-UPLOAD_SPEED = '//*[@id="container"]/div[1]/div[3]/div/div/div/div[2]/div[2]/div/div[4]/div/div[3]/div/div/div[2]/div[1]/div[2]/div/div[2]/span'
 
 user_data_dir = os.path.join(os.getcwd(),'chrome_profile')
 chrome_options = uc.ChromeOptions()
@@ -36,10 +36,13 @@ sppedtest_go = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS
 speedtest_go = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="container"]/div[1]/div[3]/div/div/div/div[2]/div[2]/div/div[2]/a/span[4]')))
 speedtest_go.click()
 time.sleep(30)
-speed_d = WebDriverWait(driver,10).until(EC.element_located_to_be_selected((By.XPATH,DOWNLOAD_SPEED)))
-speed_u = WebDriverWait(driver,10).until(EC.element_located_to_be_selected((By.XPATH,UPLOAD_SPEED)))
-print(f"Download speed is {speed_d}")
-print(f"Upload speed is {speed_u}")
+
+speed_d = WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.CSS_SELECTOR,DOWNLOAD_CSS)))
+time.sleep(30)
+
+speed_u = WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.CSS_SELECTOR,UPLOAD_CSS)))
+print(f"Download speed is {speed_d.text}")
+print(f"Upload speed is {speed_u.text}")
 # time.sleep(random.uniform(1.5,2.8))
 # signin = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="root"]/div/div/div/div/div/div[2]/div/div/div[2]/div[3]/div[2]/div/button/span')))
 # signin.click()
