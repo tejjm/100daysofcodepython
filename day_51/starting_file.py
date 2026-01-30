@@ -14,23 +14,32 @@ import undetected_chromedriver as uc
 import os
 import time
 import random
-
+DOWNLOAD_SPEED = '//*[@id="container"]/div[1]/div[3]/div/div/div/div[2]/div[2]/div/div[4]/div/div[3]/div/div/div[2]/div[1]/div[1]/div/div[2]/span'
+UPLOAD_SPEED = '//*[@id="container"]/div[1]/div[3]/div/div/div/div[2]/div[2]/div/div[4]/div/div[3]/div/div/div[2]/div[1]/div[2]/div/div[2]/span'
 
 user_data_dir = os.path.join(os.getcwd(),'chrome_profile')
 chrome_options = uc.ChromeOptions()
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.binary_location = '/usr/bin/google-chrome-stable' 
 chrome_options.add_argument('--start-maximized')
 chrome_options.add_argument(f'--user-data-dir={user_data_dir}')
 chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+# chrome_options.headless = True   # uncomment only later when the bot works, for now keep visible to debug
 # chrome_options.add_experimental_option('detach',True)
-driver = uc.Chrome(options=chrome_options,use_subprocess=True)
+driver = uc.Chrome(version_main=144,options=chrome_options,use_subprocess=True)
 driver.get(url=SPEED_URL)
 # speedtest_privacy = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="onetrust-accept-btn-handler"]')))
 # speedtest_privacy.click()
 # time.wait(2)
-# sppedtest_go = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'div[class*="start-button"]')))
+sppedtest_go = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'div[class*="start-button"]')))
 speedtest_go = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="container"]/div[1]/div[3]/div/div/div/div[2]/div[2]/div/div[2]/a/span[4]')))
-# speedtest_go.click()
+speedtest_go.click()
+time.sleep(30)
+speed_d = WebDriverWait(driver,10).until(EC.element_located_to_be_selected((By.XPATH,DOWNLOAD_SPEED)))
+speed_u = WebDriverWait(driver,10).until(EC.element_located_to_be_selected((By.XPATH,UPLOAD_SPEED)))
+print(f"Download speed is {speed_d}")
+print(f"Upload speed is {speed_u}")
 # time.sleep(random.uniform(1.5,2.8))
 # signin = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="root"]/div/div/div/div/div/div[2]/div/div/div[2]/div[3]/div[2]/div/button/span')))
 # signin.click()

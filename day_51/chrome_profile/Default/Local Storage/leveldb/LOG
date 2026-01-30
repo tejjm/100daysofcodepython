@@ -1,3 +1,15 @@
-2026/01/26-14:58:22.789 7ca Reusing MANIFEST /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Local Storage/leveldb/MANIFEST-000001
-2026/01/26-14:58:22.793 7ca Recovering log #21
-2026/01/26-14:58:22.793 7ca Reusing old log /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Local Storage/leveldb/000021.log 
+2026/01/30-03:58:06.663 919e Reusing MANIFEST /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Local Storage/leveldb/MANIFEST-000001
+2026/01/30-03:58:06.668 919e Recovering log #21
+2026/01/30-03:58:06.669 919e Reusing old log /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Local Storage/leveldb/000021.log 
+2026/01/30-03:58:18.290 91a0 Level-0 table #25: started
+2026/01/30-03:58:18.300 91a0 Level-0 table #25: 19959 bytes OK
+2026/01/30-03:58:18.308 91a0 Delete type=0 #21
+2026/01/30-03:58:18.308 91a0 Compacting 4@0 + 1@1 files
+2026/01/30-03:58:18.314 91a0 Generated table #26@0: 115 keys, 41250 bytes
+2026/01/30-03:58:18.314 91a0 Compacted 4@0 + 1@1 files => 41250 bytes
+2026/01/30-03:58:18.318 91a0 compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/01/30-03:58:18.319 91a0 Delete type=2 #25
+2026/01/30-03:58:18.319 91a0 Delete type=2 #22
+2026/01/30-03:58:18.319 91a0 Delete type=2 #19
+2026/01/30-03:58:18.319 91a0 Delete type=2 #15
+2026/01/30-03:58:18.319 91a0 Delete type=2 #13
