@@ -1,0 +1,17 @@
+2026/01/31-04:18:11.208 eb8 Creating DB /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/WebStorage/7/IndexedDB/indexeddb.leveldb since it was missing.
+2026/01/31-04:18:11.226 eb8 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/WebStorage/7/IndexedDB/indexeddb.leveldb/MANIFEST-000001
+2026/01/31-04:18:11.246 ebd Level-0 table #5: started
+2026/01/31-04:18:11.254 ebd Level-0 table #5: 1076 bytes OK
+2026/01/31-04:18:11.261 ebd Delete type=0 #3
+2026/01/31-04:18:11.261 ebd Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/01/31-04:18:11.798 eb6 Level-0 table #7: started
+2026/01/31-04:18:11.802 eb6 Level-0 table #7: 1524 bytes OK
+2026/01/31-04:18:11.807 eb6 Delete type=0 #4
+2026/01/31-04:18:11.808 eb6 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/01/31-04:18:11.808 eb6 Manual compaction at level-1 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at '\x00\x03\x01\x1f\x03\x00\xf0\x0b]$\xc1yB\x00\x01\x18\x000\x008\x003\x00b\x008\x00b\x002\x002\x004\x00c\x00d\x00f\x000\x003\x00e\x00a\x00c\x009\x001\x006\x004\x007\x00e\x007' @ 134 : 1
+2026/01/31-04:18:11.808 eb6 Compacting 1@1 + 1@2 files
+2026/01/31-04:18:11.812 eb6 Generated table #8@1: 26 keys, 736 bytes
+2026/01/31-04:18:11.812 eb6 Compacted 1@1 + 1@2 files => 736 bytes
+2026/01/31-04:18:11.816 eb6 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/01/31-04:18:11.816 eb6 Delete type=2 #7
+2026/01/31-04:18:11.816 eb6 Manual compaction at level-1 from '\x00\x03\x01\x1f\x03\x00\xf0\x0b]$\xc1yB\x00\x01\x18\x000\x008\x003\x00b\x008\x00b\x002\x002\x004\x00c\x00d\x00f\x000\x003\x00e\x00a\x00c\x009\x001\x006\x004\x007\x00e\x007' @ 134 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
