@@ -1,3 +1,15 @@
-2026/01/31-05:51:07.782 7105 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Session Storage/MANIFEST-000001
-2026/01/31-05:51:07.784 7105 Recovering log #16
-2026/01/31-05:51:07.784 7105 Reusing old log /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Session Storage/000016.log 
+2026/01/31-06:07:46.234 88e1 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Session Storage/MANIFEST-000001
+2026/01/31-06:07:46.235 88e1 Recovering log #16
+2026/01/31-06:07:46.235 88e1 Reusing old log /home/uttejm/100daysofcodepython/day_51/chrome_profile/Default/Session Storage/000016.log 
+2026/01/31-06:07:47.132 88e3 Level-0 table #20: started
+2026/01/31-06:07:47.149 88e3 Level-0 table #20: 9243 bytes OK
+2026/01/31-06:07:47.158 88e3 Delete type=0 #16
+2026/01/31-06:07:47.158 88e3 Compacting 4@0 + 1@1 files
+2026/01/31-06:07:47.164 88e3 Generated table #21@0: 1051 keys, 22932 bytes
+2026/01/31-06:07:47.164 88e3 Compacted 4@0 + 1@1 files => 22932 bytes
+2026/01/31-06:07:47.168 88e3 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/01/31-06:07:47.169 88e3 Delete type=2 #8
+2026/01/31-06:07:47.169 88e3 Delete type=2 #17
+2026/01/31-06:07:47.169 88e3 Delete type=2 #11
+2026/01/31-06:07:47.169 88e3 Delete type=2 #20
+2026/01/31-06:07:47.169 88e3 Delete type=2 #14
