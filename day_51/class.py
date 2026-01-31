@@ -1,5 +1,5 @@
-PROMISED_DOWNLOAD = 45
-PROMISED_UPLOAD = 45
+PROMISED_DOWNLOAD = 300
+PROMISED_UPLOAD = 300
 EMAIL = 'johnbeenrecruiting@gmail.com'
 PW = 'Testing@1990'
 URL = 'https://bsky.app/'
@@ -17,7 +17,7 @@ import time
 import random
 
 
-class InternetSpeedTwitterBot:
+class InternetSpeedTweetBot:
     def __init__(self):
         user_data_dir = os.path.join(os.getcwd(),'chrome_profile')
         chrome_options = uc.ChromeOptions()
@@ -41,10 +41,27 @@ class InternetSpeedTwitterBot:
         speed_u = WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((By.CSS_SELECTOR,UPLOAD_CSS)))
         return speed_d,speed_u
 
-    def tweet_at_provider():
-        pass
+    def tweet_at_provider(self,up,down):
+        if up < PROMISED_UPLOAD or down < PROMISED_DOWNLOAD:
+            self.driver.get(URL)
+            new_post = WebDriverWait(self.driver,20).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'button[aria-label="Compose new post"]')))
+            new_post.click()
+            type = WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((By.CSS_SELECTOR,'div[contenteditable="true"][role="textbox"]')))
+            message = f"Hey @act my current network speed is  {up} MBPS upload and {down} MBPS download, I was promised {PROMISED_UPLOAD} MBPS upload and {PROMISED_DOWNLOAD} MBPS download, What happened? "
+            for n in message:
+                time.sleep(random.uniform(0.10,0.25))
+                type.send_keys(n)
+            post = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'[data-testid="composerPublishBtn"]')))
+            post.click()
+            profile = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'a[aria-label="Profile"]')))
+            profile.click()      
+        print("Press Enter to exit browser")
+        input()
+        
 
-speed_bot = InternetSpeedTwitterBot()
-down,up = speed_bot.get_internet_speed()
-print(down.text)
-print(up.text)
+
+tweet_bot = InternetSpeedTweetBot()
+down,up = tweet_bot.get_internet_speed()
+down = float(down.text)
+up = float(up.text)
+tweet_bot.tweet_at_provider(up=up,down=down)
