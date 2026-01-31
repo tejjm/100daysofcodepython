@@ -1,0 +1,5 @@
+Video Demo
+Watch the bot in action → https://drive.google.com/file/d/1JLMZCMayXE8xO-6IIcst8O7SflpDxcsJ/view?usp=sharing
+(Shows full speed test → conditional post → published complaint)
+Just daily practice while balancing a full-time job. Over halfway through #100DaysOfCode — momentum building!
+#100DaysOfCode #Python #Selenium #Automation #WebScraping
