@@ -1,3 +1,6 @@
-2026/02/01-13:25:39.224 3d5c8 Reusing MANIFEST /home/uttejm/100daysofcodepython/day_52/chrome_profile/Default/Local Storage/leveldb/MANIFEST-000001
-2026/02/01-13:25:39.227 3d5c8 Recovering log #3
-2026/02/01-13:25:39.228 3d5c8 Reusing old log /home/uttejm/100daysofcodepython/day_52/chrome_profile/Default/Local Storage/leveldb/000003.log 
+2026/02/01-13:58:32.140 3f96a Reusing MANIFEST /home/uttejm/100daysofcodepython/day_52/chrome_profile/Default/Local Storage/leveldb/MANIFEST-000001
+2026/02/01-13:58:32.143 3f96a Recovering log #3
+2026/02/01-13:58:32.144 3f96a Reusing old log /home/uttejm/100daysofcodepython/day_52/chrome_profile/Default/Local Storage/leveldb/000003.log 
+2026/02/01-14:02:32.883 3f96c Level-0 table #5: started
+2026/02/01-14:02:32.894 3f96c Level-0 table #5: 19511 bytes OK
+2026/02/01-14:02:32.900 3f96c Delete type=0 #3
