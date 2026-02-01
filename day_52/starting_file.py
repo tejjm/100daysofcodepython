@@ -1,6 +1,7 @@
 EMAIL = 'johnbeenrecruiting@gmail.com'
 PW = 'JohnBeenJohn@1996'
 INSTA_URL = "https://www.instagram.com/"
+PAGE_TO_LOOK_AT = 'nasa'
 import os
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -36,13 +37,18 @@ class insta_follower_bot:
     def login(self):
         self.driver.get(INSTA_URL)
         username = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'input[name="email"]')))
-        random_typer(username.send_keys,EMAIL)
+        do_after_sec(random_typer(username.send_keys,EMAIL),3)
         password = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'input[name="pass"]')))
-        random_typer(password.send_keys,PW)
+        do_after_sec(random_typer(password.send_keys,PW),1)
         login = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'span[style="--x---base-line-clamp-line-height: calc(var(--primary-label-line-height) * 1em); --x-lineHeight: calc(var(--primary-label-line-height) * 1em);"]')))
-        login.click()
+        do_after_sec(login.click(),1)
         profile = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'a[href="/johnbeenrecruiting/"][role="link"]')))
         profile.click()
+        # search = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'a[href="#"][role="link"]')))
+        # search.click()
+        # search_page = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'input[aria-label="Search input"][placeholder="Search"]')))
+        # random_typer(search_page.send_keys,PAGE_TO_LOOK_AT)
+
         print("Press Enter to closer browser")
         input()
 
