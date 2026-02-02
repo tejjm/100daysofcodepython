@@ -51,6 +51,12 @@ class insta_follower_bot:
 
         print("Press Enter to closer browser")
         input()
+    
+    def find_followers(self):
+        pass
+
+    def follow(self):
+        pass
 
 
 
