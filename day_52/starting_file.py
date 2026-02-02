@@ -44,16 +44,15 @@ class insta_follower_bot:
         do_after_sec(login.click(),1)
         profile = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'a[href="/johnbeenrecruiting/"][role="link"]')))
         profile.click()
-        # search = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'a[href="#"][role="link"]')))
-        # search.click()
-        # search_page = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'input[aria-label="Search input"][placeholder="Search"]')))
-        # random_typer(search_page.send_keys,PAGE_TO_LOOK_AT)
 
-        print("Press Enter to closer browser")
         input()
+        print("Press enter to exit browser")
     
     def find_followers(self):
-        pass
+        search = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'svg[aria-label="Search"][role="img"]')))
+        search.click()
+        # search_page = WebDriverWait(self.driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,'input[aria-label="Search input"][placeholder="Search"]')))
+        # random_typer(search_page.send_keys,PAGE_TO_LOOK_AT)
 
     def follow(self):
         pass
@@ -62,3 +61,4 @@ class insta_follower_bot:
 
 follower_bot = insta_follower_bot()
 follower_bot.login()
+follower_bot.find_followers()
